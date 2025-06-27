@@ -15,7 +15,7 @@ class AppDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           DrawerHeader(
-            decoration: BoxDecoration(color: Theme.of(context).primaryColor),
+            decoration: BoxDecoration(color: Colors.teal),
             child: Text(
               'Product App',
               style: TextStyle(color: Colors.white, fontSize: 24),
