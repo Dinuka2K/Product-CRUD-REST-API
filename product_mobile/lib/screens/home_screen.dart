@@ -8,13 +8,28 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home')),
+      backgroundColor: Colors.grey[100],
+      appBar: AppBar(
+        title: Text('Home', style: TextStyle(fontWeight: FontWeight.bold)),
+      ),
       drawer: AppDrawer(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Welcome to Product App'),
+            const Icon(
+              Icons.shopping_bag_rounded,
+              size: 80,
+              color: Colors.teal,
+            ),
+            SizedBox(height: 24),
+            Text(
+              'Welcome to Product App',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -23,7 +38,15 @@ class HomeScreen extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => ProductListScreen()),
                 );
               },
-              child: Text('View Products'),
+              style: const ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll<Color>(
+                  Colors.tealAccent,
+                ),
+              ),
+              child: Text(
+                'View Products',
+                style: TextStyle(color: Colors.black),
+              ),
             ),
           ],
         ),
